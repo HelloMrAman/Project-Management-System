@@ -1,6 +1,97 @@
-Project Management System
-Hierarchy:
-1. Authentication:
-        a. Login Page
-        b. Registration Page
-        
+CLIENT-SIDE:--
+
+├── client/                 
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── auth/
+│   │   │   │   ├── Login.jsx
+│   │   │   │   ├── Register.jsx
+│   │   │   │   
+│   │   │   ├── dashboard/
+│   │   │   │   ├── Dashboard.jsx
+│   │   │   │   ├── ProjectWidget.jsx
+│   │   │   │   ├── TaskWidget.jsx
+│   │   │   │   ├── TimelineVisualization.jsx     # Component for Progress Visualization Timeline
+│   │   │   │   └── KanbanBoard.jsx               # Component for Kanban Board
+│   │   │   ├── projects/
+│   │   │   │   ├── ProjectList.jsx
+│   │   │   │   ├── ProjectDetail.jsx
+│   │   │   │   └── ProjectForm.jsx
+│   │   │   ├── tasks/
+│   │   │   │   ├── TaskList.jsx
+│   │   │   │   ├── TaskDetail.jsx
+│   │   │   │   └── TaskForm.jsx
+│   │   │   └── ui/
+│   │   │       ├── Button.jsx
+│   │   │       ├── Input.jsx
+│   │   │       ├── Modal.jsx
+│   │   │       └── ProgressBar.jsx              # Reusable progress bar for timeline milestones
+│   │   ├── pages/
+│   │   │   ├── AuthPage.jsx
+│   │   │   ├── DashboardPage.jsx
+│   │   │   ├── ProjectsPage.jsx
+│   │   │   ├── TasksPage.jsx
+│   │   │   └── VisualizationPage.jsx            # New page for displaying the timeline and Kanban
+│   │   ├── services/
+│   │   │   ├── authService.js
+│   │   │   ├── projectService.js
+│   │   │   ├── taskService.js
+│   │   │   └── visualizationService.js          # API calls related to timeline and Kanban
+│   │   ├── utils/
+│   │   │   ├── validation.js
+│   │   │   ├── formatters.js
+│   │   │   └── dateUtils.js                     # Utility for formatting dates on the timeline
+│   │   ├── redux/
+│   │   │   ├── store.js
+│   │   │   └── slices/
+│   │   │       ├── authSlice.js
+│   │   │       ├── projectSlice.js
+│   │   │       ├── taskSlice.js
+│   │   │       └── visualizationSlice.js        # State management for timeline/Kanban
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── .eslintrc.cjs
+│   ├── .gitignore
+│   ├── index.html
+│   ├── package.json
+│   ├── postcss.config.js
+│   └── tailwind.config.js
+
+
+
+SERVER-SIDE:--
+
+├── server/                 
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   ├── authController.js
+│   │   │   ├── projectController.js
+│   │   │   ├── taskController.js
+│   │   │   └── visualizationController.js       # Handles timeline and Kanban data APIs
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Project.js
+│   │   │   ├── Task.js
+│   │   │   └── Timeline.js                      # Schema for Progress Visualization Timeline
+│   │   ├── routes/
+│   │   │   ├── authRoutes.js
+│   │   │   ├── projectRoutes.js
+│   │   │   ├── taskRoutes.js
+│   │   │   └── visualizationRoutes.js           # Routes for timeline/Kanban APIs
+│   │   ├── middlewares/
+│   │   │   ├── authMiddleware.js
+│   │   │   └── errorHandler.js
+│   │   ├── config/
+│   │   │   ├── database.js
+│   │   │   └── environment.js
+│   │   ├── utils/
+│   │   │   ├── validation.js
+│   │   │   ├── jwtToken.js
+│   │   │   └── timelineUtils.js                 # Utility for calculating progress and milestones
+│   │   ├── app.js
+│   │   └── server.js
+│   ├── .env
+│   ├── .eslintrc.cjs
+│   ├── .gitignore
+│   └── package.json
